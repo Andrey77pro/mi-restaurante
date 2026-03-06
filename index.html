@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gourmet Heritage | Cadena de Restaurantes</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">GOURMET<span>HERITAGE</span></div>
+    <ul class="nav-links">
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#menu">Menú</a></li>
+      <li><a href="#locations">Sedes</a></li>
+      <li><a href="#reservations" class="btn-reserve">Reservar</a></li>
+    </ul>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <h1>Sabor que Cruza Fronteras</h1>
+      <p>Una experiencia culinaria artesanal en cada una de nuestras sedes.</p>
+      <a href="#menu" class="cta-button">Descubrir Menú</a>
+    </div>
+  </header>
+
+  <section id="menu" class="menu-section">
+    <h2 class="section-title">Nuestros Favoritos</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="item-img" style="background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=500')"></div>
+        <h3>Ensalada Zen</h3>
+        <p>Ingredientes orgánicos con aderezo secreto de la casa.</p>
+        <span class="price">$18.00</span>
+      </div>
+      <div class="menu-item">
+        <div class="item-img" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=500')"></div>
+        <h3>Pizza Trufada</h3>
+        <p>Masa madre, aceite de trufa blanca y champiñones silvestres.</p>
+        <span class="price">$24.00</span>
+      </div>
+      <div class="menu-item">
+        <div class="item-img" style="background-image: url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80&w=500')"></div>
+        <h3>Salmón Glaseado</h3>
+        <p>Salmón fresco con reducción de cítricos y espárragos.</p>
+        <span class="price">$32.00</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="locations" class="locations-section">
+    <h2 class="section-title">Nuestras Sedes</h2>
+    <div class="location-cards">
+      <div class="card">
+        <i class="fas fa-city"></i>
+        <h3>Centro Histórico</h3>
+        <p>Calle Antigua #45. Ambiente clásico y elegante.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-umbrella-beach"></i>
+        <h3>Marina Bay</h3>
+        <p>Muelle de Oro. Vista al mar y brisa fresca.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-mountain"></i>
+        <h3>La Cumbre</h3>
+        <p>Av. Altura 102. El mejor clima y vistas panorámicas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reservations" class="reservation-section">
+    <div class="form-container">
+      <h2>Reserva tu Mesa</h2>
+      <form id="res-form">
+        <input type="text" placeholder="Nombre Completo" required>
+        <input type="email" placeholder="Correo Electrónico" required>
+        <div class="row">
+          <select required>
+            <option value="">Selecciona Sede</option>
+            <option value="centro">Centro Histórico</option>
+            <option value="marina">Marina Bay</option>
+            <option value="cumbre">La Cumbre</option>
+          </select>
+          <input type="number" placeholder="Pax" min="1" required>
+        </div>
+        <input type="date" required>
+        <button type="submit" class="submit-btn">Confirmar Reserva</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Gourmet Heritage Chain. Diseñado por ArtheStudios.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
