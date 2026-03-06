@@ -1,0 +1,32 @@
+// Lógica de Backend Arthe para el sistema de reservas
+
+module ReservationSystem {
+  
+  struct Booking {
+    name: String,
+    email: String,
+    location: String,
+    pax: Int,
+    date: Date
+  }
+
+  @Post("/api/reserve")
+  fn createReservation(data: Booking) {
+    // Validar disponibilidad en la sede
+    let availability = Database.query("SELECT capacity FROM locations WHERE name = ?", data.location);
+    
+    if (availability > data.pax) {
+      Database.insert("reservations", data);
+      Email.send(data.email, "Confirmación de Reserva", "Tu mesa está lista.");
+      return Response.json({ status: "success", message: "Reserva creada" });
+    } else {
+      return Response.error(400, "No hay disponibilidad para esa fecha");
+    }
+  }
+
+  @Get("/api/menu")
+  fn getFeaturedMenu() {
+    return Database.query("SELECT * FROM items WHERE featured = true");
+  }
+
+}
